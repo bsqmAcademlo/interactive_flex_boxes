@@ -1,0 +1,148 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 1rem;
+	max-width: 1024px;
+	width: 100%;
+}
+
+.content__head {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.content__head > div {
+	height: 200px;
+	border-radius: 1rem;
+}
+
+.content__head > div:nth-child(1) {
+	background-color: lightblue;
+}
+
+.content__head > div:nth-child(2) {
+	background-color: lightcoral;
+}
+
+.content__body {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.content__body--menu {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.content__body--menu > div {
+	height: 200px;
+	border-radius: 1rem;
+}
+
+.content__body--menu > div:nth-child(1) {
+	background-color: lightgreen;
+}
+
+.content__body--menu > div:nth-child(2) {
+	background-color: lightpink;
+}
+
+.content__body--menu > div:nth-child(3) {
+	background-color: lightsalmon;
+}
+
+.content__body--menu > div:nth-child(4) {
+	background-color: lightseagreen;
+}
+
+.content__body--menu > div:nth-child(5) {
+	background-color: lightskyblue;
+}
+
+.content__body--menu > div:nth-child(6) {
+	background-color: lightslategray;
+}
+
+.content__body--sidebar {
+	height: 200px;
+	background-color: black;
+	border-radius: 1rem;
+}
+
+@media (min-width: 600px) {
+	body {
+		background-color: red;
+	}
+
+	.content__head {
+		flex-direction: row;
+	}
+
+	.content__head > div {
+		width: 50%;
+	}
+
+	.content__body {
+		flex-direction: row;
+	}
+
+	.content__body--menu {
+		width: 60%;
+	}
+
+	.content__body--sidebar {
+		width: 40%;
+		height: auto;
+	}
+}
+
+@media (min-width: 800px) {
+	body {
+		background-color: green;
+	}
+
+	.content__body--menu {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.content__body--menu > div {
+		flex-grow: 1;
+		flex-basis: calc(50% - 1rem);
+	}
+}
+
+@media (min-width: 1000px) {
+	body {
+		background-color: blue;
+	}
+
+	.content__body--menu {
+		width: 70%;
+	}
+
+	.content__body--menu > div {
+		flex-basis: calc(33% - 1rem);
+	}
+
+	.content__body--sidebar {
+		width: 30%;
+	}
+}
